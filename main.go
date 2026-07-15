@@ -97,6 +97,6 @@ func main() {
 	}
 	escapedPort := strings.ReplaceAll(port, "\n", "")
 	escapedPort = strings.ReplaceAll(port, "\r", "")
-	log.Printf("Serving on port: %s\n", &escapedPort)
+	log.Printf("Serving on port: %s\n", escapedPort)
 	log.Fatal(srv.ListenAndServe())
 }
