@@ -96,7 +96,7 @@ func main() {
 		ReadHeaderTimeout: time.Second * 5,
 	}
 	escapedPort := strings.ReplaceAll(port, "\n", "")
-	escapedPort = strings.ReplaceAll(port, "\r", "")
+	escapedPort = strings.ReplaceAll(escapedPort, "\r", "")
 	log.Printf("Serving on port: %s\n", escapedPort)
 	log.Fatal(srv.ListenAndServe())
 }
